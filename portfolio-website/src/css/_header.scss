@@ -1,0 +1,106 @@
+@use 'animations';
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Public+Sans&display=swap');
+
+$dark-blue: #203a4c; 
+$text-field: #eaeaeb;
+$errors: #f43030;
+
+$cyan: #5fb4a2;
+$blue: rgba(58, 198, 233, 0.5); //#3dd7fd
+
+$light-mode-text-and-footer: #33323d; 
+$bg: #fafafa;
+$dark-bg: #292c35; // #121212 //#171f24
+
+$page-indentation: 10rem;
+
+@mixin navBar{
+    width: 20rem;
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .link{
+        text-decoration: none;
+        color: $light-mode-text-and-footer;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+}
+@mixin HeaderAndFooter($jc, $side-padding){
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+    padding: 2rem $side-padding;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: $bg;
+    color: $light-mode-text-and-footer;
+    transition: background-color 0.4s ease;
+}
+.body{
+    margin: 0 $page-indentation;
+}
+//
+h1{
+    font-family: "Ibarra Real Nova";
+    font-size: 40px;
+}
+
+header{
+    @include HeaderAndFooter(flex-end, 0);
+    .circleContainer{
+        position: relative;
+        height: 2rem;
+        width: 4.6rem;
+        border-radius: 2.5rem;
+        background-color: $light-mode-text-and-footer;
+        margin-right: 3rem;
+        cursor: pointer;
+        .circle{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0.15rem;
+            height: 1.7rem;
+            width: 1.7rem;
+            border-radius: 50%;
+            background-color: white;
+            z-index: 2;
+            @include animations.move(moveBack, 2.75rem, 0.15rem);
+            animation: moveBack 0.4s ease-in-out forwards;  
+        }
+        .moon{
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0.7rem;
+            color: white;
+        }
+        .yellow.moon{
+            left: 0.7rem;
+            color: #f1c40f;
+        }
+    }
+    nav{
+        @include navBar;
+        .active.link{
+            color: $cyan;
+        }
+    }
+    .menu-container{
+        cursor: pointer;
+    }
+}

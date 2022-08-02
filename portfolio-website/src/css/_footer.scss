@@ -1,0 +1,24 @@
+@use 'header';
+
+footer{
+    margin-top: 4rem;
+    @include header.HeaderAndFooter(space-between, 10rem);
+    background-color: header.$light-mode-text-and-footer;
+
+    .page-links{
+        @include header.navBar;
+        display: flex;
+        // align-items: center;
+        .link{
+            color: white;
+        }
+    }
+    .media-links{
+        width: 105px;
+        display: flex;
+        justify-content: space-between;
+        a > *{
+            height: 24px;
+        }
+    }
+}

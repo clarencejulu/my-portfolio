@@ -1,0 +1,19 @@
+{
+    "projects": [
+        {
+            "name": "Country Viewer",
+            "intro": "This web application displays some key information about all countries in the world!",
+            "overviewimage": "./overview-images/countries.webp"
+        },
+        {
+            "name": "IP Address Tracker",
+            "intro": "This webpage shows the user's IP Address and location on the map on the initial load. The user can also search for any IP Addresses and see key information",
+            "overviewimage": "./overview-images/ip.webp"
+        },
+        {
+            "name": "Rock, Paper, Scissors",
+            "intro": "Play Rock, Paper, Scissors against the computer and see if you got what it takes...",
+            "overviewimage": "./overview-images/rps.webp"
+        }
+    ]
+}

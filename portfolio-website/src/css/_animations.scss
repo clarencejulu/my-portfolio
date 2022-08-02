@@ -1,0 +1,19 @@
+@mixin move($name, $start, $end){
+    @keyframes #{$name}{
+        0%{
+            left: $start;
+        }
+        15%{
+            height: 100%;
+            width: 45%;
+        }
+        85%{
+            height: 1.7rem;
+            width: 1.7rem;
+        }
+        100%{
+            left: $end;
+        }
+    }
+}
+

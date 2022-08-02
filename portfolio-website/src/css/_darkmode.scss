@@ -1,0 +1,55 @@
+@use 'header';
+@use 'animations';
+@use 'portfolio';
+
+body.dark{
+    background-color: header.$dark-bg; 
+    color: white;
+    header{
+        .circleContainer{       
+            .circle{
+                @include animations.move(move, 0.15rem, 2.75rem);
+                animation: move 0.4s ease-in-out forwards;  
+            }
+        }
+        nav{
+            .link{
+                color: white;
+            }
+            .active.link{
+                color: header.$blue;
+            }
+        }
+        .menu-container > *{
+            path{
+                fill: white;
+            }
+        }
+    }
+    .smallscreen-nav{
+        background-color: darken(header.$dark-bg , 5%); 
+    }
+    footer{
+        background-color: darken(header.$dark-bg , 5%); 
+    }
+
+    .project{
+        .overview-image{
+            box-shadow: 5px 5px 10px portfolio.$grey-darkmode;
+        }
+        .project-info-container{
+            .project-info{
+                button{
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                }
+                button:hover{
+                    background-color: header.$blue;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@use 'header';
+
+.smallscreen-nav{
+    width: 10rem;
+    border-radius: 8px;
+    background-color: header.$light-mode-text-and-footer;
+    margin-top: -1.5rem;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; 
+    right: 2rem; //same as current .body padding
+    z-index: 1;
+    p{
+        color: white;
+    }
+}
+
+$sizes-for-spacing: 1300px 6rem, 900px 4rem, 800px 2rem;
+@each $screen, $size in $sizes-for-spacing{
+    @media(max-width: $screen){
+        .body{
+            margin: 0 $size;
+        }
+        footer{
+            padding: 2rem $size;
+        }
+    }
+}
+$sizes-for-project-widths: 1127px 52.4% 47%, 1080px 56.4% 43%, 962px 60.9% 38.5%, 700px 450px 450px;
+@each $screen, $image-width, $info-width in $sizes-for-project-widths{
+    @media(max-width: $screen){
+        .project{
+            .overview-image{
+                width: $image-width;
+            }
+            .project-info-container{
+                width: $info-width;
+            }
+        }
+    }
+}
+$sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415px, 750px 400px;
+@each $screen, $height in $sizes-for-project-heights{
+    @media(max-width: $screen){
+        .project{
+            > *{
+                height: $height;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 962px){
+    .project{
+        .project-info-container{
+            justify-content: flex-end;
+            .project-info{
+                width: 85%;
+            }
+        }
+    }
+    .project:nth-of-type(even){
+        .project-info-container{
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media(max-width: 800px){
+    header{
+        @include header.HeaderAndFooter(space-between, 0);
+    }
+}
+
+@media(max-width: 700px){
+    .project{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        .overview-image{
+            height: 450px;
+        }
+        .project-info-container{
+            height: auto;
+            margin-top: 2rem;
+            justify-content: center;
+            .project-info{
+                padding: 2rem 0 2.5rem;
+            }
+        }
+    }
+    .project:nth-of-type(even){
+        flex-direction: column;
+        .project-info-container{
+            justify-content: center;
+        }
+    }
+}
+
+@media(max-width: 600px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        .page-links{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            .link{
+                margin-bottom: 1.4rem;
+            }
+        }
+        .media-links{
+            width: 175px;
+        }
+    }
+}
+
+$sizes-for-smaller-project-widths: 485px 365px, 385px 335px;
+@each $screen, $size in $sizes-for-smaller-project-widths{
+    @media(max-width: $screen){
+        .project{
+            .overview-image{
+                width: $size;
+                height: $size;
+            }
+            .project-info-container{
+                width: $size;
+            }
+        }
+    }
+}
