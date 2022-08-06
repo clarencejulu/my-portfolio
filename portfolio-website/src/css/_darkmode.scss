@@ -52,4 +52,26 @@ body.dark{
             }
         }
     }
+
+    #contact-page{
+        .contact-container{
+            form{
+                input, textarea{
+                    background-color: header.$light-mode-text-and-footer;
+                    // background-color: darken(header.$dark-bg , 5%);
+                    color: white;
+                }
+                button{
+                    background-color: header.$blue;
+                }
+                button:hover{
+                    background-color: darken(header.$blue, 25%);
+                }
+            }
+            .sent-message{
+                background-color: header.$blue;
+            }
+        }
+    }
+
 }

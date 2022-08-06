@@ -1,21 +1,21 @@
 @use 'animations';
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Public+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Poppins&family=Public+Sans&display=swap');
 
-$dark-blue: #203a4c; 
+// $dark-blue: #203a4c; 
 $text-field: #eaeaeb;
-$errors: #f43030;
-
+// $errors: #f43030;
 $cyan: #5fb4a2;
 $blue: rgba(58, 198, 233, 0.5); //#3dd7fd
 
 $light-mode-text-and-footer: #33323d; 
 $bg: #fafafa;
 $dark-bg: #292c35; // #121212 //#171f24
-
+// $linear: line
 $page-indentation: 10rem;
 
-@mixin navBar{
-    width: 20rem;
+@mixin navBar($width){
+    width: $width;
     // display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,15 +46,16 @@ html{
 body{
     margin: 0;
     background-color: $bg;
+    // background: linear-gradient($bg,rgba(95, 180, 162, 0.6));
+    // background-repeat: no-repeat;
     color: $light-mode-text-and-footer;
     transition: background-color 0.4s ease;
 }
 .body{
     margin: 0 $page-indentation;
 }
-//
 h1{
-    font-family: "Ibarra Real Nova";
+    font-family: "Ibarra Real Nova", serif;
     font-size: 40px;
 }
 
@@ -95,7 +96,7 @@ header{
         }
     }
     nav{
-        @include navBar;
+        @include navBar(20rem);
         .active.link{
             color: $cyan;
         }

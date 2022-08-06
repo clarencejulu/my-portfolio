@@ -1,12 +1,20 @@
 @use 'header';
 
+@mixin footer-media-links($width, $a-height){
+    width: $width;
+    display: flex;
+    justify-content: space-between;
+    a > *{
+        height: $a-height;
+    }
+}
 footer{
-    margin-top: 4rem;
+    margin-top: 5.5rem;
     @include header.HeaderAndFooter(space-between, 10rem);
     background-color: header.$light-mode-text-and-footer;
-
+    
     .page-links{
-        @include header.navBar;
+        @include header.navBar(25rem);
         display: flex;
         // align-items: center;
         .link{
@@ -14,11 +22,6 @@ footer{
         }
     }
     .media-links{
-        width: 105px;
-        display: flex;
-        justify-content: space-between;
-        a > *{
-            height: 24px;
-        }
+        @include footer-media-links(105px, 24px);
     }
 }

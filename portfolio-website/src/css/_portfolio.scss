@@ -3,21 +3,19 @@
 $grey-lightmode: rgb(51, 50, 61, 0.8); 
 $grey-darkmode: rgba(83, 83, 83, 0.8);
 
+// main{
+//     margin-top: 2rem;
+// }
 .project{
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
     > *{
         width: 49.7%; 
-        height: 600px; //for large screens
-        // height: 500px;
-        // background-color: rgb(212, 211, 211);
+        height: 600px; 
     }
     .overview-image{
         background-color: header.$bg;
-        // @media(max-width: 1200px){
-        //     background-color: transparent;
-        // }
 
         background-size: cover;
         background-repeat: no-repeat;
@@ -26,7 +24,6 @@ $grey-darkmode: rgba(83, 83, 83, 0.8);
         box-shadow: 5px 5px 10px 1px $grey-lightmode;
     }
     .project-info-container{
-        // background-color: aqua;
         display: flex;
         justify-content: center;
         .project-info{
@@ -43,7 +40,6 @@ $grey-darkmode: rgba(83, 83, 83, 0.8);
                 margin: 0;
             }
             h1{
-                // margin: 0.75rem 0;
                 margin-bottom: 1.25rem;
             }
             p{
@@ -57,7 +53,6 @@ $grey-darkmode: rgba(83, 83, 83, 0.8);
                 height: 48px;
                 border: 1px solid header.$light-mode-text-and-footer;
                 background-color: transparent;
-                // color: $grey;
 
                 font-size: 12px;
                 letter-spacing: 2px;

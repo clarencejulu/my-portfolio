@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Public+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Poppins&family=Public+Sans&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-  font-family: "Ibarra Real Nova";
+  font-family: "Ibarra Real Nova", serif;
   font-size: 40px;
 }
 
@@ -115,40 +115,6 @@ header nav .active.link {
 }
 header .menu-container {
   cursor: pointer;
-}
-
-footer {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 10rem;
-  background-color: #33323d;
-}
-footer .page-links {
-  width: 20rem;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
-footer .page-links .link {
-  text-decoration: none;
-  color: #33323d;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
-  cursor: pointer;
-}
-footer .page-links .link {
-  color: white;
-}
-footer .media-links {
-  width: 105px;
-  display: flex;
-  justify-content: space-between;
-}
-footer .media-links a > * {
-  height: 24px;
 }
 
 .project {
@@ -280,9 +246,166 @@ body.dark .project .project-info-container .project-info button:hover {
   border: none;
   color: white;
 }
+body.dark #contact-page .contact-container form input, body.dark #contact-page .contact-container form textarea {
+  background-color: #33323d;
+  color: white;
+}
+body.dark #contact-page .contact-container form button {
+  background-color: rgba(58, 198, 233, 0.5);
+}
+body.dark #contact-page .contact-container form button:hover {
+  background-color: rgba(16, 121, 147, 0.5);
+}
+body.dark #contact-page .contact-container .sent-message {
+  background-color: rgba(58, 198, 233, 0.5);
+}
+
+footer {
+  margin-top: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  background-color: #33323d;
+}
+footer .page-links {
+  width: 25rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+footer .page-links .link {
+  text-decoration: none;
+  color: #33323d;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+footer .page-links .link {
+  color: white;
+}
+footer .media-links {
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .media-links a > * {
+  height: 24px;
+}
+
+#contact-page .contact-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  border-top: 2px solid #eaeaeb;
+  border-bottom: 2px solid #eaeaeb;
+  position: relative;
+}
+#contact-page .contact-container form {
+  margin: 3rem 0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+#contact-page .contact-container form label {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+#contact-page .contact-container form input::-moz-placeholder, #contact-page .contact-container form textarea::-moz-placeholder {
+  color: #8b8b8b;
+}
+#contact-page .contact-container form input:-ms-input-placeholder, #contact-page .contact-container form textarea:-ms-input-placeholder {
+  color: #8b8b8b;
+}
+#contact-page .contact-container form input::placeholder, #contact-page .contact-container form textarea::placeholder {
+  color: #8b8b8b;
+}
+#contact-page .contact-container form input, #contact-page .contact-container form textarea {
+  border: none;
+  border-radius: 8px;
+  background-color: #eaeaeb;
+  color: #33323d;
+  padding: 10px;
+  margin-bottom: 1.8rem;
+}
+#contact-page .contact-container form textarea {
+  resize: none;
+  height: 135px;
+  padding: 10px;
+}
+#contact-page .contact-container form button {
+  cursor: pointer;
+  align-self: center;
+  width: 180px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: background-color 0.2s ease-in;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 20px;
+  background-color: #5fb4a2;
+}
+#contact-page .contact-container form button:hover {
+  background-color: #3f8778;
+}
+#contact-page .contact-container .sent-message {
+  position: fixed;
+  top: 150px;
+  right: -290px;
+  -webkit-animation: move-message 6s;
+          animation: move-message 6s;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 20px;
+  background-color: #5fb4a2;
+  width: 290px;
+}
+@-webkit-keyframes move-message {
+  0% {
+    right: -290px;
+  }
+  15% {
+    right: 20px;
+  }
+  70% {
+    opacity: 1;
+    right: 20px;
+  }
+  100% {
+    opacity: 0;
+    right: -290px;
+  }
+}
+@keyframes move-message {
+  0% {
+    right: -290px;
+  }
+  15% {
+    right: 20px;
+  }
+  70% {
+    opacity: 1;
+    right: 20px;
+  }
+  100% {
+    opacity: 0;
+    right: -290px;
+  }
+}
+#contact-page .contact-container .sent-message p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
 
 .smallscreen-nav {
-  width: 10rem;
+  width: 12rem;
   border-radius: 8px;
   background-color: #33323d;
   margin-top: -1.5rem;
@@ -293,6 +416,7 @@ body.dark .project .project-info-container .project-info button:hover {
   z-index: 1;
 }
 .smallscreen-nav p {
+  padding: 0.6rem 0;
   color: white;
 }
 
@@ -395,6 +519,12 @@ body.dark .project .project-info-container .project-info button:hover {
     align-items: center;
     padding: 2rem 0;
   }
+  footer .page-links {
+    width: 20rem;
+  }
+  #contact-page .contact-container form {
+    width: 80%;
+  }
 }
 @media (max-width: 700px) {
   .project {
@@ -424,13 +554,14 @@ body.dark .project .project-info-container .project-info button:hover {
   footer {
     flex-direction: column;
     align-items: center;
+    margin-top: 4rem;
   }
   footer .page-links {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0.5rem;
   }
-  footer .page-links .link {
+  footer .page-links .logo, footer .page-links .link {
     margin-bottom: 1.4rem;
   }
   footer .media-links {

@@ -1,7 +1,7 @@
 @use 'header';
 
 .smallscreen-nav{
-    width: 10rem;
+    width: 12rem;
     border-radius: 8px;
     background-color: header.$light-mode-text-and-footer;
     margin-top: -1.5rem;
@@ -12,6 +12,7 @@
     right: 2rem; //same as current .body padding
     z-index: 1;
     p{
+        padding: 0.6rem 0;
         color: white;
     }
 }
@@ -72,6 +73,18 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
     header{
         @include header.HeaderAndFooter(space-between, 0);
     }
+    footer{
+        .page-links{
+            width: 20rem;
+        }
+    }
+    #contact-page{
+        .contact-container{
+            form{
+                width: 80%;
+            }
+        }
+    }
 }
 
 @media(max-width: 700px){
@@ -103,11 +116,12 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
     footer{
         flex-direction: column;
         align-items: center;
+        margin-top: 4rem;
         .page-links{
             flex-direction: column;
             align-items: center;
             margin-bottom: 0.5rem;
-            .link{
+            .logo, .link{
                 margin-bottom: 1.4rem;
             }
         }

@@ -17,3 +17,22 @@
     }
 }
 
+@mixin move-message{
+    @keyframes move-message{
+        0%{
+            right: -290px;
+        }
+        15%{
+            right: 20px;
+        }
+        70%{
+            opacity: 1;
+            right: 20px;
+        }
+        100%{
+            opacity: 0;
+            right: -290px;
+        }
+    }
+}
+

@@ -1,7 +1,8 @@
 import React from 'react';
-import frontendMentor from '../images/favicon-32x32.png';
+import frontendMentor from '../images/frontendmentor.png';
 import { ReactComponent as Github} from '../images/github.svg';
 import { ReactComponent as Linkedin} from '../images/linkedin.svg';
+import { ReactComponent as Logo} from '../images/logo.svg';
 // import {useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -10,6 +11,7 @@ export const Footer = () => {
   return (
     <footer>
       <nav className='page-links'>
+        <Logo className='logo' />
         <Link to="/" className='link'>Home</Link>
         <Link to="/portfolio" className='link'>Portfolio</Link>
         <Link to="/contact-me" className='link'>Contact Me</Link>
