@@ -1,4 +1,5 @@
 @use 'header';
+@use 'home';
 
 $grey-lightmode: rgb(51, 50, 61, 0.8); 
 $grey-darkmode: rgba(83, 83, 83, 0.8);
@@ -36,32 +37,12 @@ $grey-darkmode: rgba(83, 83, 83, 0.8);
             border-color: header.$text-field;
             width: 65%;
             height: 100%;
+            @include home.h1-p-button;
             > *{
                 margin: 0;
             }
             h1{
                 margin-bottom: 1.25rem;
-            }
-            p{
-                opacity: 0.8; //
-                line-height: 30px;
-                font-size: 15px;
-            }
-            button{
-                margin-top: 1.25rem;
-                width: 175px;
-                height: 48px;
-                border: 1px solid header.$light-mode-text-and-footer;
-                background-color: transparent;
-
-                font-size: 12px;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-            }
-            button:hover{
-                background-color: header.$cyan;
-                border: none;
-                color: white;
             }
         }
     }

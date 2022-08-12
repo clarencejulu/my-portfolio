@@ -5,18 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMoon} from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as MenuBar} from '../images/hamburger.svg';
 import { ReactComponent as CloseMenu} from '../images/close.svg';
-// import {Menu} from './Menu';
 import {useLocation} from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
     const {isMenu, changeIsMenu} = useContext(GlobalContext);
-
-    const [darkMode, setDarkMode] = useState(false);
     const {theme, changeTheme} = useContext(ThemeContext);
+    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkmodeStatus')) === theme.dark); 
+    
     const activateDarkMode = ()=>{
         setDarkMode(!darkMode); 
         changeTheme(darkMode ? theme.light : theme.dark); 
+        localStorage.setItem('darkmodeStatus', darkMode ? JSON.stringify(theme.light) : JSON.stringify(theme.dark));
     }
     const location = useLocation();
 

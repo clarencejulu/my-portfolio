@@ -1,0 +1,55 @@
+@use 'header';
+@mixin h1-p-button{
+    p{
+        opacity: 0.8; //
+        line-height: 30px;
+        font-size: 15px;
+    }
+    button{
+        margin-top: 1.25rem;
+        width: 175px;
+        height: 48px;
+        border: 1px solid header.$light-mode-text-and-footer;
+        background-color: transparent;
+
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    button:hover{
+        background-color: header.$cyan;
+        border: none;
+        color: white;
+    }
+}
+
+#home{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+    > *{
+        width: 450px; 
+        height: 600px; 
+    }
+    .aboutme-image{
+        background-image: url('../images/aboutme.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 5px 5px 10px 1px rgb(51, 50, 61, 0.8);
+        border-radius: 8px;
+    }
+    .aboutme-info{
+        border-width: 2px 0;
+        border-style: solid;
+        border-color: header.$text-field;
+        @include h1-p-button;
+        h1{
+            margin-top: 10%;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+            line-height: 35px;
+        }
+    }
+}

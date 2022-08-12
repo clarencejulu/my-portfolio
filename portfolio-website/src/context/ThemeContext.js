@@ -8,11 +8,8 @@ const themes = {
 export const ThemeContext = createContext(themes);
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(themes.light);
-    // (localStorage.getItem('darkmodeStatus') === themes.light);
-  //   useEffect(()=> {
-  //     localStorage.setItem('darkmodeStatus', JSON.stringify(darkMode));
-  // }, [darkMode])
+    const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('darkmodeStatus')) ? JSON.parse(localStorage.getItem('darkmodeStatus')) : themes.light); //
+    
     function changeTheme(theme) {
       setTheme(theme);
     }

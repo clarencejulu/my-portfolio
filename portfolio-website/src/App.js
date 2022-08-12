@@ -3,6 +3,7 @@ import './css/App.css';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import {Menu} from './components/Menu';
+import { Home } from './components/Home';
 import {Portfolio} from './components/Portfolio';
 import {Contact} from './components/Contact';
 import { ThemeProvider } from './context/ThemeContext';
@@ -18,7 +19,7 @@ function App() {
             <Header />
             <Menu />
             <Routes>
-              <Route exact path="/"/>
+              <Route exact path="/" element={<Home />}/>
               <Route exact path="/portfolio" element={<Portfolio />}/>
               <Route exact path="/contact-me" element={<Contact />}/>
             </Routes>

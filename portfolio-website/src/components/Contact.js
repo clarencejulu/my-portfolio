@@ -32,9 +32,9 @@ export const Contact = () => {
   return (
     <section id='contact-page'>
         <div className='contact-container'>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} autoComplete="off">
                 <label htmlFor='name'>Name</label>
-                <input type="text" name="name" placeholder="Jane Appleseed" required/>
+                <input type="text" name="name" placeholder="Jane Appleseed" required />
                 <label htmlFor='email'>Email</label>
                 <input type="email" name="email" placeholder="email@example.com" required/>
                 <label htmlFor='message'>Message</label>

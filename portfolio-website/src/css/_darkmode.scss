@@ -2,6 +2,19 @@
 @use 'animations';
 @use 'portfolio';
 
+@mixin darker-buttons{
+    button{
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+    }
+    button:hover{
+        background-color: header.$blue;
+        border: none;
+        color: white;
+    }
+}
+
 body.dark{
     background-color: header.$dark-bg; 
     color: white;
@@ -28,9 +41,25 @@ body.dark{
     }
     .smallscreen-nav{
         background-color: darken(header.$dark-bg , 5%); 
+        p{
+            color: white;
+            border-color: darken(header.$text-field, 35%);
+        }
+        .active{
+            color: header.$blue;
+            border-color: header.$blue;
+        }
     }
     footer{
         background-color: darken(header.$dark-bg , 5%); 
+    }
+
+    #home{
+        border-color: darken(header.$text-field, 35%); //
+        .aboutme-info{
+            border-color: darken(header.$text-field, 35%);
+            @include darker-buttons;
+        }
     }
 
     .project{
@@ -39,26 +68,18 @@ body.dark{
         }
         .project-info-container{
             .project-info{
-                button{
-                    border: 1px solid white;
-                    background-color: transparent;
-                    color: white;
-                }
-                button:hover{
-                    background-color: header.$blue;
-                    border: none;
-                    color: white;
-                }
+                border-color: darken(header.$text-field, 35%);
+                @include darker-buttons;
             }
         }
     }
 
     #contact-page{
         .contact-container{
+            border-color: darken(header.$text-field, 35%);
             form{
                 input, textarea{
                     background-color: header.$light-mode-text-and-footer;
-                    // background-color: darken(header.$dark-bg , 5%);
                     color: white;
                 }
                 button{

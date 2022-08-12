@@ -1,5 +1,4 @@
 @use 'animations';
-// @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Public+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Poppins&family=Public+Sans&display=swap');
 
 // $dark-blue: #203a4c; 
@@ -11,7 +10,6 @@ $blue: rgba(58, 198, 233, 0.5); //#3dd7fd
 $light-mode-text-and-footer: #33323d; 
 $bg: #fafafa;
 $dark-bg: #292c35; // #121212 //#171f24
-// $linear: line
 $page-indentation: 10rem;
 
 @mixin navBar($width){
@@ -46,8 +44,6 @@ html{
 body{
     margin: 0;
     background-color: $bg;
-    // background: linear-gradient($bg,rgba(95, 180, 162, 0.6));
-    // background-repeat: no-repeat;
     color: $light-mode-text-and-footer;
     transition: background-color 0.4s ease;
 }

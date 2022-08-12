@@ -3,7 +3,7 @@
 .smallscreen-nav{
     width: 12rem;
     border-radius: 8px;
-    background-color: header.$light-mode-text-and-footer;
+    background-color: header.$text-field;
     margin-top: -1.5rem;
     // display: flex;
     flex-direction: column;
@@ -13,7 +13,14 @@
     z-index: 1;
     p{
         padding: 0.6rem 0;
-        color: white;
+        width: 10rem;
+        text-align: center;
+        color: header.$light-mode-text-and-footer;
+        border-bottom: 1px solid header.$bg;
+    }
+    .active{
+        color: header.$cyan;
+        border-color: header.$cyan;
     }
 }
 
@@ -52,6 +59,22 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
     }
 }
 
+@media(max-width: 1400px){
+    #home{
+        > *{
+            width: 405px; 
+            height: 540px;
+        }
+    } 
+}
+@media(max-width: 1050px){
+    #home{
+        > *{
+            width: 360px; 
+            height: 480px;
+        }
+    } 
+}
 
 @media(max-width: 962px){
     .project{
@@ -67,6 +90,31 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
             justify-content: flex-start;
         }
     }
+}
+
+@media(max-width: 950px){
+    #home{
+        border-width: 2px 0 2px;
+        border-style: solid;
+        border-color: header.$text-field;
+        .aboutme-image{
+            width: 270px; 
+            height: 360px;
+            margin-top: 2.5rem;
+        }
+        .aboutme-info{
+            border-width: 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-size: 30px;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    } 
 }
 
 @media(max-width: 800px){
@@ -88,6 +136,20 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
 }
 
 @media(max-width: 700px){
+    #home{
+        .aboutme-info{
+            width: 250px; 
+            p{
+                font-size: 13px;
+            }
+            button{
+                width: 149px;
+                height: 35px;   
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+        }
+    }
     .project{
         flex-direction: column;
         align-items: center;
@@ -113,6 +175,26 @@ $sizes-for-project-heights: 1424px 510px, 1200px 475px, 1010px 445px, 840px 415p
 }
 
 @media(max-width: 600px){
+    #home{
+        flex-direction: column;
+        align-items: center;
+        .aboutme-image{
+            width: 225px; 
+            height: 300px;
+        }
+        .aboutme-info{
+            margin-top: 2rem;
+            width: 330px; 
+            height: 375px;
+            h1{
+                font-size: 20px;
+                margin-bottom: 0.2rem;
+            }
+            p{
+                line-height: 30px;
+            }
+        }
+    }
     footer{
         flex-direction: column;
         align-items: center;
