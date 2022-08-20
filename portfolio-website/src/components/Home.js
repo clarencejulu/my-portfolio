@@ -5,7 +5,7 @@ import { topFunction } from './Portfolio';
 export const Home = () => {
   const navigate = useNavigate();
   const toPortfolioPage = () => {
-    navigate("/portfolio");
+    navigate("my-portfolio/portfolio");
     topFunction();
   }
   return (

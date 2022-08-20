@@ -42,7 +42,7 @@ export const Header = () => {
             </div>
             <nav style={isSmallScreen || isMenu ? {display: "none"} : {display: "flex"}}>
                 <Link to="my-portfolio/" className={location.pathname === "/my-portfolio/" ? 'active link' : 'link'}>Home</Link>
-                <Link to="my-portfolio/portfolio" className={location.pathname === "/my-portfolio/portfolio" || location.pathname === "/my-portfolio/portfolio/project"? 'active link' : 'link'}>Portfolio</Link>
+                <Link to="my-portfolio/portfolio" className={location.pathname === "/my-portfolio/portfolio" || location.pathname === "/my-portfolio/project"? 'active link' : 'link'}>Portfolio</Link>
                 <Link to="my-portfolio/contact-me" className={location.pathname === "/my-portfolio/contact-me" ? 'active link' : 'link'}>Contact Me</Link>
             </nav>
             <div className='menu-container' style={isSmallScreen || isMenu ? {display: "block"} : {display: "none"}} onClick={() => changeIsMenu(!isMenu)}>
