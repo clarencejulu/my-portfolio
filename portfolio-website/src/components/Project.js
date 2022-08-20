@@ -5,7 +5,7 @@ const Project = ({ project }) => {
     const {name, intro, overviewimage, detailimage, description, background, website} = project;
     // const location = useLocation();
     const navigate = useNavigate();
-    const toDetailPage = () => {navigate("my-portfolio/project", {state:{
+    const toDetailPage = () => {navigate("/project", {state:{
         name:name, intro:intro, overviewimage:overviewimage,detailimage:detailimage, description:description, background:background, website:website
     }})};
 

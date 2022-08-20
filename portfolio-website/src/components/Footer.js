@@ -12,8 +12,8 @@ export const Footer = () => {
       <nav className='page-links'>
         <Logo className='logo' />
         <Link to="my-portfolio/" className='link' onClick={topFunction}>Home</Link>
-        <Link to="my-portfolio/portfolio" className='link' onClick={topFunction}>Portfolio</Link>
-        <Link to="my-portfolio/contact-me" className='link' onClick={topFunction}>Contact Me</Link>
+        <Link to="portfolio" className='link' onClick={topFunction}>Portfolio</Link>
+        <Link to="contact-me" className='link' onClick={topFunction}>Contact Me</Link>
       </nav>
 
       <nav className='media-links'>

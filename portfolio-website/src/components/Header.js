@@ -42,8 +42,8 @@ export const Header = () => {
             </div>
             <nav style={isSmallScreen || isMenu ? {display: "none"} : {display: "flex"}}>
                 <Link to="my-portfolio/" className={location.pathname === "/my-portfolio/" ? 'active link' : 'link'}>Home</Link>
-                <Link to="my-portfolio/portfolio" className={location.pathname === "/my-portfolio/portfolio" || location.pathname === "/my-portfolio/project"? 'active link' : 'link'}>Portfolio</Link>
-                <Link to="my-portfolio/contact-me" className={location.pathname === "/my-portfolio/contact-me" ? 'active link' : 'link'}>Contact Me</Link>
+                <Link to="portfolio" className={location.pathname === "/portfolio" || location.pathname === "/project"? 'active link' : 'link'}>Portfolio</Link>
+                <Link to="contact-me" className={location.pathname === "/contact-me" ? 'active link' : 'link'}>Contact Me</Link>
             </nav>
             <div className='menu-container' style={isSmallScreen || isMenu ? {display: "block"} : {display: "none"}} onClick={() => changeIsMenu(!isMenu)}>
                 <MenuBar className="menuBar" style={isMenu ? {display: "none"} : {display: "block"}}/>
