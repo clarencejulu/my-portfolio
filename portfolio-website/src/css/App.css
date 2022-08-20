@@ -256,6 +256,7 @@ header .menu-container {
   height: 48px;
   border: 1px solid #33323d;
   background-color: transparent;
+  color: #33323d;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
