@@ -3,17 +3,38 @@
         {
             "name": "Country Viewer",
             "intro": "This web application displays some key information about all countries in the world!",
-            "overviewimage": "./overview-images/countries.webp"
+            "overviewimage": "./overview-images/countries.webp",
+            "detailimage": "./overview-images/countries_detail.webp",
+            "description": "This project was built with React and an API containing information about countries.",
+            "background": "After learning react, I did this project to practice it.",
+            "website":"https://clarencejulu.github.io/countries"
         },
         {
             "name": "IP Address Tracker",
             "intro": "This webpage shows the user's IP Address and location on the map on the initial load. The user can also search for any IP Addresses and see key information",
-            "overviewimage": "./overview-images/ip.webp"
+            "overviewimage": "./overview-images/ip.webp",
+            "detailimage": "./overview-images/ip_detail.webp",
+            "description": "This project was built with Vanilla Javascript using two API's. One for the map and the other for the IP Address.",
+            "background": "I had worked on many short projects and had even just finished a 50 projects in 50 days course but this was my first personal project as a full working webpage.",
+            "website":"https://clarencejulu.github.io/track-ip-addy"
         },
         {
             "name": "Rock, Paper, Scissors",
             "intro": "Play Rock, Paper, Scissors against the computer and see if you got what it takes...",
-            "overviewimage": "./overview-images/rps.webp"
+            "overviewimage": "./overview-images/rps.webp",
+            "detailimage": "./overview-images/rps_detail.webp",
+            "description": "This project was built with Vanilla Javascript and SASS.",
+            "background": "I took on this project because I wanted to build an interactive game.",
+            "website":"https://clarencejulu.github.io/rock-paper-scissors"
+        },
+        {
+            "name": "Sneakers Product Page",
+            "intro": "View this interactive product page for a sneaker company...",
+            "overviewimage": "./overview-images/product-page.webp",
+            "detailimage": "./overview-images/product-page_detail.webp",
+            "description": "This project was built with Vanilla Javascript and SASS.",
+            "background": "I took on this project because I wanted to build an e-commerce product page.",
+            "website":"https://clarencejulu.github.io/sneakers-product-page"
         }
     ]
 }

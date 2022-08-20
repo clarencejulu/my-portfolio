@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import {Menu} from './components/Menu';
 import { Home } from './components/Home';
 import {Portfolio} from './components/Portfolio';
+import {Detail} from './components/Detail';
 import {Contact} from './components/Contact';
 import { ThemeProvider } from './context/ThemeContext';
 import { GlobalProvider } from './context/GlobalState';
@@ -20,8 +21,9 @@ function App() {
             <Menu />
             <Routes>
               <Route exact path="/" element={<Home />}/>
-              <Route exact path="/portfolio" element={<Portfolio />}/>
-              <Route exact path="/contact-me" element={<Contact />}/>
+              <Route exact path="portfolio" element={<Portfolio />}/>
+              <Route exact path="project" element={<Detail />}/>
+              <Route exact path="contact-me" element={<Contact />}/>
             </Routes>
           </div>
           <Footer />

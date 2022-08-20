@@ -127,7 +127,7 @@ header .menu-container {
   height: 600px;
 }
 #home .aboutme-image {
-  background-image: url("../images/aboutme.jpg");
+  background-image: url("../images/aboutme.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -165,6 +165,26 @@ header .menu-container {
 #home .aboutme-info p {
   font-family: "Poppins", sans-serif;
   line-height: 35px;
+}
+
+#topButton {
+  display: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 3;
+  font-size: 18px;
+  border: none;
+  background-color: #5fb4a2;
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s transform ease;
+}
+
+#topButton:hover {
+  transform: scale(1.1);
 }
 
 .project {
@@ -226,6 +246,60 @@ header .menu-container {
 
 .project:nth-of-type(even) {
   flex-direction: row-reverse;
+}
+
+.projectContainer Button {
+  margin-top: 1rem;
+  width: 155px;
+  height: 48px;
+  border: 1px solid #33323d;
+  background-color: transparent;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.projectContainer Button .arrowLeft, .projectContainer Button .arrowRight {
+  transition: 0.3s transform ease;
+}
+.projectContainer Button:hover .arrowLeft {
+  transform: translateX(-250%);
+}
+.projectContainer Button:hover .arrowRight {
+  transform: translateX(250%);
+}
+.projectContainer .projectDetails {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectContainer .projectDetails > * {
+  margin-bottom: 1.25rem;
+}
+.projectContainer .projectDetails .detailImage {
+  background-color: #fafafa;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: 90%;
+  box-shadow: 5px 5px 10px 1px rgba(51, 50, 61, 0.8);
+}
+.projectContainer .projectDetails h2 {
+  margin-bottom: 0.75rem;
+}
+.projectContainer .projectDetails p {
+  width: 590px;
+  text-align: center;
+  opacity: 0.8;
+}
+.projectContainer .projectDetails button {
+  margin-top: 1.75rem;
+  width: 235px;
+  color: white;
+  border: none;
+  background-color: #5fb4a2;
 }
 
 body.dark {
@@ -307,6 +381,9 @@ body.dark #home .aboutme-info button:hover {
   border: none;
   color: white;
 }
+body.dark #topButton {
+  background-color: rgba(58, 198, 233, 0.5);
+}
 body.dark .project .overview-image {
   box-shadow: 5px 5px 10px rgba(83, 83, 83, 0.8);
 }
@@ -322,6 +399,13 @@ body.dark .project .project-info-container .project-info button:hover {
   background-color: rgba(58, 198, 233, 0.5);
   border: none;
   color: white;
+}
+body.dark .projectContainer Button {
+  border-color: white;
+  color: white;
+}
+body.dark .projectContainer .projectDetails button {
+  background-color: rgba(58, 198, 233, 0.5);
 }
 body.dark #contact-page .contact-container {
   border-color: #8f8f94;
@@ -594,6 +678,11 @@ footer .media-links a > * {
     height: 540px;
   }
 }
+@media (max-width: 1180px) {
+  .projectContainer .projectDetails .detailImage {
+    width: 500px;
+  }
+}
 @media (max-width: 1050px) {
   #home > * {
     width: 360px;
@@ -644,6 +733,10 @@ footer .media-links a > * {
   }
   footer .page-links {
     width: 20rem;
+  }
+  #topButton {
+    right: 2rem;
+    bottom: 2rem;
   }
   #contact-page .contact-container form {
     width: 80%;
@@ -706,6 +799,13 @@ footer .media-links a > * {
   #home .aboutme-info p {
     line-height: 30px;
   }
+  #topButton {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .projectContainer .projectDetails p {
+    width: 500px;
+  }
   footer {
     flex-direction: column;
     align-items: center;
@@ -721,6 +821,24 @@ footer .media-links a > * {
   }
   footer .media-links {
     width: 175px;
+  }
+}
+@media (max-width: 510px) {
+  .projectContainer .projectDetails .detailImage {
+    width: 400px;
+    height: 400px;
+  }
+  .projectContainer .projectDetails p {
+    width: 400px;
+  }
+}
+@media (max-width: 410px) {
+  .projectContainer .projectDetails .detailImage {
+    width: 350px;
+    height: 350px;
+  }
+  .projectContainer .projectDetails p {
+    width: 350px;
   }
 }
 @media (max-width: 485px) {

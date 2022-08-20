@@ -1,25 +1,14 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const Project = ({ project }) => {
-    const {name, intro, overviewimage} = project;
-    // const doThis = () => {}
-    // useEffect(()=>{
-    //     const mediaWatcher = window.matchMedia("(min-width: 600px)");   
-    //     function updateWidth(){
-    //         const bodyWidth = document.querySelector('.body').clientWidth;
-    //         const width = (bodyWidth / 2) - 14;
+    const {name, intro, overviewimage, detailimage, description, background, website} = project;
+    // const location = useLocation();
+    const navigate = useNavigate();
+    const toDetailPage = () => {navigate("/project", {state:{
+        name:name, intro:intro, overviewimage:overviewimage,detailimage:detailimage, description:description, background:background, website:website
+    }})};
 
-    //         document.querySelectorAll('.project').querySelectorAll('*').forEach( element => {
-    //             element.style.width = `${width}px`;
-    //         })
-    //     }
-    //     mediaWatcher.addEventListener('change',   updateWidth);
-    
-    //     return function cleanup(){
-    //       mediaWatcher.removeEventListener('change', updateWidth);
-    //     }
-    // })
-    
   return (
     <div className='project'>
         <div className='overview-image' style={{backgroundImage: `url(${overviewimage})`}}/>
@@ -27,7 +16,7 @@ const Project = ({ project }) => {
             <div className="project-info">
                 <h1>{name}</h1>
                 <p>{intro}</p>
-                <button>View Project</button>
+                <button onClick={() => toDetailPage()}>View Project</button>
             </div>
         </div>
     </div>)}

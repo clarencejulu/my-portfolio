@@ -62,6 +62,9 @@ body.dark{
         }
     }
 
+    #topButton{
+        background-color: header.$blue;
+    }
     .project{
         .overview-image{
             box-shadow: 5px 5px 10px portfolio.$grey-darkmode;
@@ -70,6 +73,17 @@ body.dark{
             .project-info{
                 border-color: darken(header.$text-field, 35%);
                 @include darker-buttons;
+            }
+        }
+    }
+    .projectContainer{
+        Button{
+            border-color: white;
+            color: white;
+        }
+        .projectDetails{
+            button{
+                background-color: header.$blue;
             }
         }
     }
