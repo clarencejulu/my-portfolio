@@ -41,7 +41,7 @@ export const Header = () => {
                 <FontAwesomeIcon icon={faMoon} className='moon'/>
             </div>
             <nav style={isSmallScreen || isMenu ? {display: "none"} : {display: "flex"}}>
-                <Link to="/" className={location.pathname === "/" ? 'active link' : 'link'}>Home</Link>
+                <Link to="my-portfolio/" className={location.pathname === "/my-portfolio/" ? 'active link' : 'link'}>Home</Link>
                 <Link to="portfolio" className={location.pathname === "/portfolio" || location.pathname === "/project"? 'active link' : 'link'}>Portfolio</Link>
                 <Link to="contact-me" className={location.pathname === "/contact-me" ? 'active link' : 'link'}>Contact Me</Link>
             </nav>

@@ -14,10 +14,10 @@ export const Menu = () => {
       changeIsMenu(!isMenu);
       topFunction();
     }
-
+    
   return (
     <nav className='smallscreen-nav' style={isMenu ? {display: "flex"} : {display: "none"}}>
-        <p onClick={() => menuFunction("/")} className={location.pathname === "/" ? 'active' : ''}>Home</p>
+        <p onClick={() => menuFunction("my-portfolio/")} className={location.pathname === "/my-portfolio/" ? 'active' : ''}>Home</p>
         <p onClick={() => menuFunction("/portfolio")} className={location.pathname === "/portfolio" || location.pathname === "/project" ? 'active' : ''}>Portfolio</p>
         <p onClick={() => menuFunction("/contact-me")} className={location.pathname === "/contact-me" ? 'active' : ''}>Contact Me</p>
     </nav>

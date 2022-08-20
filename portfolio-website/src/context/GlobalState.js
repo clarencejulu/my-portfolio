@@ -28,7 +28,6 @@ export const GlobalProvider = ({ children }) => {
         getProjects(database);
 
     }, []);
-    console.log(projects);
   return (
     <GlobalContext.Provider value={{ isMenu: isMenu, changeIsMenu: changeIsMenu, projects: projects }}>
         {children}
