@@ -21,9 +21,9 @@ function App() {
             <Menu />
             <Routes>
               <Route exact path="my-portfolio/" element={<Home />}/>
-              <Route exact path="portfolio" element={<Portfolio />}/>
-              <Route exact path="project" element={<Detail />}/>
-              <Route exact path="contact-me" element={<Contact />}/>
+              <Route exact path="my-portfolio/portfolio" element={<Portfolio />}/>
+              <Route exact path="my-portfolio/project" element={<Detail />}/>
+              <Route exact path="my-portfolio/contact-me" element={<Contact />}/>
             </Routes>
           </div>
           <Footer />
