@@ -20,7 +20,7 @@ function App() {
             <Header />
             <Menu />
             <Routes>
-              <Route exact path="/" element={<Home />}/>
+              <Route exact path="my-portfolio/" element={<Home />}/>
               <Route exact path="portfolio" element={<Portfolio />}/>
               <Route exact path="project" element={<Detail />}/>
               <Route exact path="contact-me" element={<Contact />}/>
