@@ -35,6 +35,15 @@
             "description": "This project was built with Vanilla Javascript and SASS.",
             "background": "I took on this project because I wanted to build an e-commerce product page.",
             "website":"https://clarencejulu.github.io/sneakers-product-page"
+        },
+        {
+            "name": "Crowdfunding Page",
+            "intro": "Make a donation to this crowdfunding page for a bamboo monitor stand",
+            "overviewimage": "https://clarencejulu.github.io/my-portfolio/overview-images/crowdfunding.webp",
+            "detailimage": "https://clarencejulu.github.io/my-portfolio/overview-images/crowdfunding_detail.webp",
+            "description": "This project was built with ReactJs, SASS, Redux for State Management and JSON Server for the backend.",
+            "background": "I wanted to implement 'redux toolkit' into a project and also have a backend to store the changing data. This project was a good oppurtunity to apply both.",
+            "website":"https://clarencejulu.github.io/crowdfunding"
         }
     ]
 }
